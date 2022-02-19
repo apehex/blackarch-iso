@@ -1,0 +1,11 @@
+root:x:0:root
+network:x:90:archie
+power:x:98:archie
+adm:x:999:archie
+wheel:x:998:archie
+audio:x:995:archie
+storage:x:988:archie
+uucp:x:987:archie
+video:x:986:archie
+users:x:985:archie
+archie:x:1000:
