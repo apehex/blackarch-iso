@@ -1,8 +1,49 @@
+### archiso
+bash
+
 ### network
 iw
 
+### terminal
+rxvt-unicode
+surfraw
+w3m
+
+### development
+pyenv
+python-poetry
+
+### utilities
+curl
+pass
+stow
+tree
+
 ### windows manager
 i3
+i3status
+
+### security
+cryptsetup
+gnupg
+
+### office
+libreoffice-fresh
+pandoc
+texlive-most
+
+### graphics
+gimp
+inkscape
+
+### media
+transmission-cli
+
+### vm
+virtualbox
+
+### power
+powertop
 
 ### pentesting tools
 blackarch-anti-forensic
