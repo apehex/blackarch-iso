@@ -17,7 +17,7 @@ grep -Fxvf "${SOURCEDIR}/packages.${ARCH}.discard" "${SOURCEDIR}/../${BUNDLE}/pa
 cat "${SOURCEDIR}/packages.${ARCH}.add" "${WORKDIR}/packages.${ARCH}.tmp" | sort -u | grep -v "###" > "${WORKDIR}/packages.${ARCH}"
 
 # adding files (user dir)
-rsync -avh --update --progress "${SOURCEDIR}/airootfs" "${WORKDIR}/airootfs"
+rsync -avh --update --progress "${SOURCEDIR}/airootfs/" "${WORKDIR}/airootfs/"
 
 # import dotfiles
 
