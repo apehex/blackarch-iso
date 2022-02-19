@@ -1,3 +1,10 @@
+### archiso
+nano
+zsh
+
+### vm
+open-vm-tools
+
 ### network
 modemmanager
 networkmanager
