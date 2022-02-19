@@ -1,5 +1,8 @@
 ### archiso
+bind-tools
+ddrescue
 nano
+testdisk
 zsh
 
 ### vm
@@ -22,6 +25,7 @@ xdg-user-dirs
 xdg-user-dirs-gtk
 
 ### development
+gdb
 rustup
 
 ### applications
