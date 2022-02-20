@@ -31,3 +31,4 @@ done
 
 # remove temp files
 rm "${WORKDIR}/packages.${ARCH}.tmp"
+rm "${WORKDIR}/airootfs/etc/skel/.gitkeep"
