@@ -3,9 +3,9 @@
 # init
 SOURCEDIR="`dirname $(realpath ${0})`"
 WORKDIR="`mktemp -d`/custom-iso"
+DOTDIR="${HOME}/workspace/homesick/dotfiles/home"
 BUNDLE="${1:-slim-iso}"
 ARCH="x86_64"
-# _GROUPS="`pacman -Sg | grep blackarch- | sort -u | tr -s '\n' ' '`"
 
 # copy the target profile
 cp -r "${SOURCEDIR}/../${BUNDLE}/" "${WORKDIR}" 
@@ -20,6 +20,12 @@ cat "${SOURCEDIR}/packages.${ARCH}.add" "${WORKDIR}/packages.${ARCH}.tmp" | sort
 rsync -avh --update --progress "${SOURCEDIR}/airootfs/" "${WORKDIR}/airootfs/"
 
 # import dotfiles
+rsync -avh --progress --update "${DOTDIR}/" "${WORKDIR}/airootfs/etc/skel/.dotfiles/"
+
+# Link the user dotfiles
+for filename in "${WORKDIR}/airootfs/etc/skel/.dotfiles/"* ; do
+    stow --dir="${WORKDIR}/airootfs/etc/skel/.dotfiles" --target="${WORKDIR}/airootfs/etc/skel" --restow "$(basename $filename)"
+done
 
 # clone tools
 
