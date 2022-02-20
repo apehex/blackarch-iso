@@ -27,6 +27,9 @@ for filename in "${WORKDIR}/airootfs/etc/skel/.dotfiles/"* ; do
     stow --dir="${WORKDIR}/airootfs/etc/skel/.dotfiles" --target="${WORKDIR}/airootfs/etc/skel" --restow "$(basename $filename)"
 done
 
+# remove conflicting files
+rm "${WORKDIR}/airootfs/etc/skel/.screenrc"
+
 # clone tools
 
 # remove temp files
