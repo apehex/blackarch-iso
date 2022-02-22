@@ -15,6 +15,7 @@ python-poetry
 
 ### utilities
 curl
+jdk-openjdk
 pass
 stow
 tree
