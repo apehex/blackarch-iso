@@ -49,11 +49,6 @@ rm -f /root/{.automated_script.sh,.zlogin}
 # setting root password
 echo "root:blackarch" | chpasswd
 
-# copy config files to skel
-cp /usr/share/blackarch/config/bash/bashrc /etc/skel/.bashrc
-cp /usr/share/blackarch/config/bash/bash_profile /etc/skel/.bash_profile
-cp /usr/share/blackarch/config/zsh/zshrc /etc/skel/.zshrc
-
 # setup user
 useradd -m -g users -G wheel,power,audio,video,storage -s /bin/zsh liveuser
 echo "liveuser:blackarch" | chpasswd
