@@ -97,11 +97,3 @@ pacman -U --noconfirm https://archive.archlinux.org/packages/d/dosfstools/dosfst
 
 # GDK Pixbuf
 gdk-pixbuf-query-loaders --update-cache
-
-# /etc
-echo 'BlackArch Linux' > /etc/arch-release
-
-# vim
-cp -r /usr/share/blackarch/config/vim/vim /home/liveuser/.vim
-cp /usr/share/blackarch/config/vim/vimrc /home/liveuser/.vimrc
-
