@@ -46,12 +46,8 @@ systemctl disable dhcpcd sshd rpcbind.service
 rm -f /etc/systemd/system/getty@tty1.service.d/autologin.conf
 rm -f /root/{.automated_script.sh,.zlogin}
 
-# setting root password
-echo "root:blackarch" | chpasswd
-
 # setup user
 useradd -m -g users -G wheel,power,audio,video,storage -s /bin/zsh liveuser
-echo "liveuser:blackarch" | chpasswd
 ln -sf /usr/share/icons/blackarch-icons/apps/scalable/distributor-logo-blackarch.svg /home/liveuser/.face
 mkdir -p /home/liveuser/Desktop
 chown -R liveuser:users /home/liveuser/Desktop
