@@ -76,7 +76,6 @@ pacman-key --init
 pacman-key --populate blackarch archlinux
 pacman -Fyy
 pacman-db-upgrade
-updatedb
 sync
 
 # font configuration
