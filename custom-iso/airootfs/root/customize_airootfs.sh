@@ -66,9 +66,6 @@ sed -i -e "s|Install System|Install BlackArch|g" /usr/share/applications/calamar
 ln -sf /usr/share/applications/xfce4-terminal-emulator.desktop /home/liveuser/Desktop/terminal.desktop
 chmod +x /home/liveuser/Desktop/*.desktop
 
-# copy files over to home
-cp -r /etc/skel/. /root/.
-
 # repo + database
 curl -s https://blackarch.org/strap.sh | sh
 pacman -Syy --noconfirm
