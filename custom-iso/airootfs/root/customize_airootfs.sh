@@ -29,12 +29,6 @@ enabled_services=('choose-mirror.service' 'lightdm.service' 'dbus' 'pacman-init'
 systemctl enable ${enabled_services[@]}
 systemctl set-default graphical.target
 
-# create the user directory for live session
-if [ ! -d /root ]; then
-  mkdir /root
-  chmod 700 /root && chown -R root:root /root
-fi
-
 # disable network stuff
 rm -f /etc/udev/rules.d/81-dhcpcd.rules
 systemctl disable dhcpcd sshd rpcbind.service
