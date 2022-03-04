@@ -47,14 +47,8 @@ rm -f /etc/systemd/system/getty@tty1.service.d/autologin.conf
 rm -f /root/{.automated_script.sh,.zlogin}
 
 # setup user
-ln -sf /usr/share/icons/blackarch-icons/apps/scalable/distributor-logo-blackarch.svg /home/liveuser/.face
-mkdir -p /home/liveuser/Desktop
-chown -R liveuser:users /home/liveuser/Desktop
-chmod -R 755 /home/liveuser/Desktop
 ln -sf /usr/share/applications/calamares.desktop /home/liveuser/Desktop/calamares.desktop
 sed -i -e "s|Install System|Install BlackArch|g" /usr/share/applications/calamares.desktop
-ln -sf /usr/share/applications/xfce4-terminal-emulator.desktop /home/liveuser/Desktop/terminal.desktop
-chmod +x /home/liveuser/Desktop/*.desktop
 
 # repo + database
 curl -s https://blackarch.org/strap.sh | sh
