@@ -42,14 +42,6 @@ echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 rm -f /etc/udev/rules.d/81-dhcpcd.rules
 systemctl disable dhcpcd sshd rpcbind.service
 
-# remove special (not needed) files
-rm -f /etc/systemd/system/getty@tty1.service.d/autologin.conf
-rm -f /root/{.automated_script.sh,.zlogin}
-
-# setup user
-ln -sf /usr/share/applications/calamares.desktop /home/liveuser/Desktop/calamares.desktop
-sed -i -e "s|Install System|Install BlackArch|g" /usr/share/applications/calamares.desktop
-
 # repo + database
 curl -s https://blackarch.org/strap.sh | sh
 pacman -Syy --noconfirm

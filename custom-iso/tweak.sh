@@ -18,8 +18,9 @@ cat "${SOURCEDIR}/packages.${ARCH}.add" "${WORKDIR}/packages.${ARCH}.tmp" | sort
 
 # remove unwanted files
 rm -rf "${WORKDIR}/airootfs/etc/skel/*"
-
-# tweak post install hook
+rm -f "${WORKDIR}/airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf"
+rm -f "${WORKDIR}/airootfs/root/.automated_script.sh"
+rm -f "${WORKDIR}/airootfs/root/.zlogin"
 
 # adding files (user dir)
 rsync -avh --update --progress "${SOURCEDIR}/airootfs/" "${WORKDIR}/airootfs/"
