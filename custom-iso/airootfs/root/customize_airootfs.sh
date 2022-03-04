@@ -35,9 +35,6 @@ if [ ! -d /root ]; then
   chmod 700 /root && chown -R root:root /root
 fi
 
-# disable pc speaker beep
-echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
-
 # disable network stuff
 rm -f /etc/udev/rules.d/81-dhcpcd.rules
 systemctl disable dhcpcd sshd rpcbind.service
