@@ -4,7 +4,6 @@
 set -eu
 
 # set locale
-sed -i 's/#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
 locale-gen
 
 # set timezone
