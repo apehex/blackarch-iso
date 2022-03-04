@@ -71,10 +71,5 @@ ln -sf /etc/fonts/conf.avail/* /etc/fonts/conf.d
 rm -f /etc/fonts/conf.d/05-reset-dirs-sample.conf
 rm -f /etc/fonts/conf.d/09-autohint-if-no-hinting.conf
 
-# temporary fixes for ruby based tools
-cd /usr/share/whatweb && rm -f Gemfile.lock &&
-  bundle config build.nokogiri --use-system-libraries &&
-  bundle install --path vendor/bundle && rm -f Gemfile.lock
-
 # Temporary fix for calamares
 pacman -U --noconfirm https://archive.archlinux.org/packages/d/dosfstools/dosfstools-4.1-3-x86_64.pkg.tar.xz
