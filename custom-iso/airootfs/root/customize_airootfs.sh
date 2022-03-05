@@ -6,11 +6,6 @@ set -eu
 # set locale
 locale-gen
 
-# enabling all mirrors
-#sed -i "s|#Server|Server|g" /etc/pacman.d/mirrorlist
-sed -i 's|#Server https://ftp.halifax|Server https://ftp.halifax|g' \
-  /etc/pacman.d/mirrorlist
-
 # storing the system journal in RAM
 sed -i 's/#\(Storage=\)auto/\1volatile/' /etc/systemd/journald.conf
 
