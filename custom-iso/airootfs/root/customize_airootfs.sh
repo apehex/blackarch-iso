@@ -6,9 +6,6 @@ set -eu
 # set locale
 locale-gen
 
-# set timezone
-ln -sf /usr/share/zoneinfo/UTC /etc/localtime
-
 # enabling all mirrors
 #sed -i "s|#Server|Server|g" /etc/pacman.d/mirrorlist
 sed -i 's|#Server https://ftp.halifax|Server https://ftp.halifax|g' \
