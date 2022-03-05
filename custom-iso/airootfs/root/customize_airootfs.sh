@@ -6,9 +6,6 @@ set -eu
 # set locale
 locale-gen
 
-# storing the system journal in RAM
-sed -i 's/#\(Storage=\)auto/\1volatile/' /etc/systemd/journald.conf
-
 # default releng configuration
 sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
