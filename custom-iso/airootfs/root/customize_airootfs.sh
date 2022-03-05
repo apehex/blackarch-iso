@@ -6,11 +6,6 @@ set -eu
 # set locale
 locale-gen
 
-# default releng configuration
-sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
-sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
-sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
-
 # enable useful services and display manager
 enabled_services=('choose-mirror.service' 'lightdm.service' 'dbus' 'pacman-init'
   'NetworkManager' 'irqbalance' 'vboxservice')
