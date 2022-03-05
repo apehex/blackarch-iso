@@ -6,16 +6,6 @@ set -eu
 # set locale
 locale-gen
 
-# enable useful services and display manager
-enabled_services=('choose-mirror.service' 'lightdm.service' 'dbus' 'pacman-init'
-  'NetworkManager' 'irqbalance' 'vboxservice')
-systemctl enable ${enabled_services[@]}
-systemctl set-default graphical.target
-
-# disable network stuff
-rm -f /etc/udev/rules.d/81-dhcpcd.rules
-systemctl disable dhcpcd sshd rpcbind.service
-
 # repo + database
 curl -s https://blackarch.org/strap.sh | sh
 pacman -Syy --noconfirm
