@@ -28,6 +28,17 @@ i3status
 cryptsetup
 gnupg
 
+### hiding
+tor
+tor-autocircuit
+tor-browser-en
+torcrawl
+torctl
+torpy
+tor-router
+torshammer
+torsocks
+
 ### office
 libreoffice-fresh
 pandoc

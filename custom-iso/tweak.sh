@@ -8,7 +8,7 @@ BUNDLE="${1:-slim-iso}"
 ARCH="x86_64"
 
 # copy the target profile
-cp -r "${SOURCEDIR}/../${BUNDLE}/" "${WORKDIR}" 
+cp -r "${SOURCEDIR}/../${BUNDLE}/" "${WORKDIR}"
 
 # discard packages
 grep -Fxvf "${SOURCEDIR}/packages.${ARCH}.discard" "${SOURCEDIR}/../${BUNDLE}/packages.${ARCH}" > "${WORKDIR}/packages.${ARCH}.tmp"
