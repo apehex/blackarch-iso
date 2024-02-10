@@ -1,0 +1,3 @@
+[submodule ".lib/homesick"]
+	path = .lib/homesick
+	url = https://github.com/apehex/homesick.git

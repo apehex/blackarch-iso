@@ -3,7 +3,7 @@
 # init
 SOURCEDIR="`dirname $(realpath ${0})`"
 WORKDIR="`mktemp -d`/custom-iso"
-DOTDIR="${HOME}/workspace/homesick/dotfiles/home"
+DOTDIR="${SOURCEDIR}/dotfiles"
 BUNDLE="${1:-slim-iso}"
 ARCH="x86_64"
 
